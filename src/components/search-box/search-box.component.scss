@@ -1,0 +1,24 @@
+@import '../../styles/index';
+
+.search-box-container {
+    img {
+        max-width: 15px;
+        position: absolute;
+        top: 10px;
+        margin-left: 14px;
+    }
+}
+.search-box {
+    height: 20px;
+    padding: 6px 12px 6px 39px;
+    font-size: 12px;
+    min-width: 190px;
+    border-radius: 2px;
+    border: 1px solid $border-color;
+    outline: none;
+    transition: 0.3s;
+    &:hover {
+        border-color: darken($border-color, 10);
+        transition: 0.3s;
+    }
+}

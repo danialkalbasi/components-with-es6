@@ -1,0 +1,123 @@
+@import '../../styles/index';
+
+@mixin box-syle() {
+    background: #fff;
+    padding: $margin/2 ($margin * 1.5);
+    box-shadow: -1px 1px 10px 0px lighten($border-color, 3);
+}
+
+.home-header {
+    background-color: #fff;
+    width: 100%;
+    display: block;
+    padding: $margin * 2 0 $margin;
+}
+
+.home-feedbacks {
+    padding: 70px 0;
+    border-top: 2px solid $border-color;
+    height: 100%;
+}
+
+.home-feedbacks-toolbar {
+    display: flex;
+    flex-direction: row;
+    position: relative;
+    @media screen and(max-width: $break-point) {
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+}
+
+.home-feedbacks-toolbar-filters {
+    display: flex;
+    flex-direction: row;
+
+    > div {
+        margin-left: $margin;
+    }
+    @media screen and(max-width: $break-point) {
+        margin-top: 23px;
+        > div {
+            margin: 0 $margin/2;
+        }
+    }
+}
+
+.home-feedbacks-list-container {
+    margin-bottom: 100px;
+}
+
+.home-feedbacks-list {
+    display: flex;
+    flex-direction: column;
+    font-size: 12px;
+    @include box-syle();
+    margin-top: $margin * 1.5;
+
+    .home-feedbacks-list-row {
+        display: flex;
+        border-bottom: 1px solid lighten($border-color, 15);
+        padding: 15px 0 $margin;
+        &:last-child {
+            border: none;
+        }
+        .list-col-item-rating {
+            width: 10%;
+        }
+        .list-col-item-device {
+            width: 16%;
+        }
+        .list-col-item-comment {
+            width: 30%;
+            padding-top: 8px;
+            line-height: 1.8;
+            padding-right: 8%;
+        }
+        .list-col-item-browser {
+            width: 15%;
+            display: flex;
+            flex-direction: column;
+            > span:last-child {
+                line-height: 2;
+            }
+        }
+        .list-col-item-platform {
+            width: 15%;
+        }
+
+        &.header {
+            border: none;
+            p {
+                color: lighten($secondary-color, 15);
+            }
+            padding: $margin * 1.5 0;
+            font-size: 12px;
+            text-transform: uppercase;
+            .list-col-item-comment {
+                padding-top: 0;
+                line-height: 1;
+            }
+        }
+    }
+}
+
+.home-feedbacks-list-not-found {
+    text-align: center;
+    margin: $margin 0;
+}
+
+.home-stats-container {
+    @include box-syle();
+    margin-top: $margin / 2;
+}
+.home-stats {
+    position: absolute;
+    right: -5px;
+    max-width: 225px;
+    top: -60px;
+    @media screen and (max-width: 797px) {
+        display: none;
+    }
+}
