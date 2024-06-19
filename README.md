@@ -1,5 +1,5 @@
-# Usabilla Dashboard
-A simple Usabilla dashboard with Vanilla JavaScript(ES6).
+# React components style with vanilla js
+A group of components which built with Vanilla JavaScript(ES6).
 
 ![Usabilla Dashboard](https://github.com/danialkalbasi/usabilla-dashboard/blob/master/screenshot.png)
 
@@ -18,5 +18,5 @@ Run `yarn test` or `npm run test`. To view test coverage, run `yarn test:coverag
 ### Code styles
 Run `yarn lint` or `npm run lint`.
 
-### Enviroments
+### Environments
 Tested with node: v8.x.x, yarn: v1.x.x, and npm: v5.x.x
